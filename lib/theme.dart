@@ -10,11 +10,11 @@ ThemeData catppuccinTheme(Flavor flavor) {
           iconTheme: IconThemeData(color: flavor.text),
           elevation: 0,
           titleTextStyle: TextStyle(
-              color: flavor.text, fontSize: 20, fontWeight: FontWeight.bold),
-          backgroundColor: flavor.crust,
+              color: flavor.blue, fontSize: 20, fontWeight: FontWeight.bold),
+          backgroundColor: flavor.flamingo,
           foregroundColor: flavor.mantle),
       colorScheme: ColorScheme(
-        background: flavor.base,
+        background: flavor.mantle,
         brightness: Brightness.light,
         error: flavor.surface2,
         onBackground: flavor.text,
@@ -32,10 +32,10 @@ ThemeData catppuccinTheme(Flavor flavor) {
       ),
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
-        foregroundColor: flavor.text,
+        foregroundColor: flavor.blue,
       )),
       textButtonTheme: TextButtonThemeData(
-          style: TextButton.styleFrom(foregroundColor: flavor.text)),
+          style: TextButton.styleFrom(foregroundColor: flavor.blue)),
       hintColor: flavor.text,
       listTileTheme: ListTileThemeData(
           selectedColor: flavor.text, selectedTileColor: flavor.mantle),

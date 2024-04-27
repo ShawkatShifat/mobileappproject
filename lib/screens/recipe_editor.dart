@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:reciper/screens/pages_layout.dart';
-import 'package:reciper/utilities/database.dart';
 import 'package:reciper/models/recipe.dart';
 import 'package:reciper/screens/home.dart';
 import 'package:reciper/widgets/extract_recipe_button.dart';
@@ -43,20 +42,20 @@ class _RecipeEditorPageState extends State<RecipeEditorPage> {
                     formKey.currentState!.save();
 
                     if (!widget.isUpdate) {
-                      DatabaseService.createRecipe(Recipe(
+                      Recipe(
                           title: title,
                           servings: servings,
                           steps: steps,
                           ingredients: ingredients,
-                          source: source));
+                          source: source);
                     } else {
-                      DatabaseService.updateRecipe(Recipe(
+                      Recipe(
                           id: widget.initialRecipe!.id,
                           servings: servings,
                           title: title,
                           steps: steps,
                           ingredients: ingredients,
-                          source: source));
+                          source: source);
                     }
 
                     Navigator.of(context).push(

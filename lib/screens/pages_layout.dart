@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:reciper/screens/home.dart';
 import 'package:reciper/screens/recipe_editor.dart';
 import 'package:reciper/screens/settings.dart';
+import 'package:reciper/screens/login.dart';
+import 'package:reciper/screens/signup.dart';
 import 'package:reciper/widgets/bottom_nav_bar.dart';
 
 class PagesLayout extends StatefulWidget {
@@ -26,7 +28,9 @@ class _PagesLayoutState extends State<PagesLayout> {
   List<Widget> pages = [
     const HomePage(),
     const RecipeEditorPage(),
-    const Settings()
+    const Settings(),
+    const LoginScreen(),
+    const SignupScreen()
   ];
 
   @override
